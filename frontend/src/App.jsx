@@ -9,14 +9,14 @@ import Profile from "./pages/Profile.jsx";
 import Checkout from "./pages/Checkout.jsx";
 import OrderSuccess from "./pages/OrderSuccess.jsx";
 
-import express from "express";
-import cors from "cors";          // <-- Make sure you have this import
-import dotenv from "dotenv";
+// import express from "express";
+// import cors from "cors";          // <-- Make sure you have this import
+// import dotenv from "dotenv";
 // ... other imports
 
-dotenv.config();
+// dotenv.config();
 
-const app = express();
+// const app = express();
 
 // ===== ADD CORS CONFIGURATION HERE =====
 const allowedOrigins = [
@@ -25,21 +25,21 @@ const allowedOrigins = [
   'https://your-frontend.netlify.app'  // Replace with your actual Netlify URL after deployment
 ];
 
-app.use(cors({
-  origin: function (origin, callback) {
-    if (!origin || allowedOrigins.indexOf(origin) !== -1) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
-  credentials: true
-}));
+// app.use(cors({
+//   origin: function (origin, callback) {
+//     if (!origin || allowedOrigins.indexOf(origin) !== -1) {
+//       callback(null, true);
+//     } else {
+//       callback(new Error('Not allowed by CORS'));
+//     }
+//   },
+//   credentials: true
+// }));
 // =======================================
 
-// Then your other middleware and routes
-app.use(express.json());
-app.use("/api/auth", authRoutes);
+// // Then your other middleware and routes
+// app.use(express.json());
+// app.use("/api/auth", authRoutes);
 // ... etc.
 
 function App() {
